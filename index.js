@@ -91,19 +91,63 @@ for(i in alumnos) {
 
 
 var alumno = ''; // aqui escribir Karina, Ramiro o Romina y ver que pasa
-
+var result = '';
 switch(alumno) {
     case 'Ramiro':
-        console.log('Hola Ramiro');
+        result = 'Hola Ramiro';
         break;
     case 'Romina':
-        console.log('Hola Romina');
+        result = 'Hola Romina';
         break;
     case 'Karina':
-        console.log('Hola Karina');
+        result = 'Hola Karina';
         break;
     default:
-        console.log('No vino nadie');
+        result = 'No vino nadie';
         break;
 }
+// console.log(result);
+
+// Funciones
+
+function suma(num1, num2) {
+    var sum = num1 + num2;
+    // console.log(sum);
+    return sum;
+}
+
+var s1 = suma(1, 3);
+var s2 = suma(1034, 120);
+var s3 = suma(0.567, 0.23453);
+var s4 = suma(-191, 100);
+
+// console.log(s1, s2, s3, s4);
+var s5 = suma(s2, s3);
+// console.log(s5);
+
+function prod(fnSuma, n1, n2) {
+    fnSuma(n1, n2);
+    
+};
+prod(suma, 3, 4);
+
+var resta = (a, b) => {
+    return a - b;
+}
+
+var r = resta(100, 30);
+
+// console.log(r);
+
+// While
+var i = 1;
+while(i <= 100) {
+    // console.log('Num >> ', i);
+    i = i + 1;
+}
+
+var li = document.getElementsByTagName('li')[2];
+li.style.backgroundColor = 'red';
+li.innerHTML = 'Hola Mundo';
+
 

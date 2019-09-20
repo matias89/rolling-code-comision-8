@@ -145,9 +145,10 @@ while(i <= 100) {
     // console.log('Num >> ', i);
     i = i + 1;
 }
-
+/*
 var li = document.getElementsByTagName('li')[2];
 li.style.backgroundColor = 'red';
 li.innerHTML = 'Hola Mundo';
+*/
 
 

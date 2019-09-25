@@ -24,4 +24,11 @@
    // }
 //}
 
+<<<<<<< HEAD
 /// console.log(family);
+=======
+console.log(family);
+
+const URL = 'http;//sdfsdfsdf';
+let n = 4;
+>>>>>>> df921868b7c2e1ba5d84a1a2ace684104aae5e0c

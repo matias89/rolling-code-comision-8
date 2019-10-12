@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background: red;
+            padding: 10px;
+        }
+        main {
+            padding: 10px;
+            min-height: 500px;
+        }
+        nav {
+            background: skyblue;
+            overflow: hidden;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            float: left;
+            padding: 6px;
+        }
+        li:hover {
+            background: orange;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Page Title</h1>
+        <nav>
+            <ul>
+                <li>Link</li>
+                <li>Link</li>
+                <li>Link</li>
+                <li>Link</li>
+                <li>Link</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <form onsubmit="submitFn();">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input type="text" class="form-control" id="lastname" />
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+            <button type="button" onclick="clearForm();" class="btn btn-warning">Limpiar</button>
+        </form>
+    </main>
+    <footer>
+        <h4>Copyright 2019</h4>
+    </footer>
+    <script type="text/javascript">
+    const submitFn = () => {
+        alert('Hello World!');
+    }
+    const clearForm = () => {
+        const inputs = document.getElementsByTagName('input');
+        if (confirm('Realmente deseas limpiar el formulario?')) {
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].value = '';
+            }
+        }
+    }
+
+    const fnFer = (a, b, c) => {
+        // console.log(b);
+
+    }
+    const a = 5;
+    const b = 9;
+    const c = 1;
+    fnFer(b, c, a);
+
+    const otroTest = (p) => {
+        p(1, 4, 2);
+    }
+
+    const l = (a, b, c) => {
+        // console.log('Ejecutando función', a, b, c);
+    };
+
+    otroTest(l);
+
+    localStorage.setItem('name', 'Roberto');
+    localStorage.setItem('lastname', 'Vizcarra');
+    const n = localStorage.getItem('name');
+    const la = localStorage.getItem('lastname');
+    document.getElementById('name').value = n;
+    document.getElementById('lastname').value = la;
+    
+    </script>
+</body>
+</html>

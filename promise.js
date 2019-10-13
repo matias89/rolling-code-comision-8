@@ -2,7 +2,7 @@ const timer = () => {
     let i = 5;
     setTimeout(() => {
         i = 0;
-    }, 1);
+    }, 1000);
     return i;
 }
 
@@ -81,19 +81,48 @@ p
         });
     });
 
-    const requestImg = fetch('https://static.azteca.com/crop/crop.php?width=750&height=450&img=https://static.azteca.com/imagenes/2018/01/fotoespecial-2185708.jpg&coordinates=50,50', {
-        method: 'POST',
-        body: JSON.stringify({test: 1, otroTest: 2})
-    });
+    const requestImg = fetch('https://static.azteca.com/crop/crop.php?width=750&height=450&img=https://static.azteca.com/imagenes/2018/01/fotoespecial-2185708.jpg&coordinates=50,50');
     requestImg.then(response => {
         const binaryObj = response.blob();
         binaryObj.then(file => {
-            const img = URL.createObjectURL(file);
+            const img = window.URL.createObjectURL(file);
+            console.log('IMG', img);
             const imgDiv = document.getElementById('img');
             const imgTag = document.createElement('img');
             imgTag.src = img;
             imgDiv.appendChild(imgTag);
         });
+    });
+
+
+const timer3 = () => {
+    return new Promise((resolve, reject) => { 
+        setTimeout(() => {
+            const n = Math.ceil(Math.random() * 10);
+            if (n > 5) {
+                resolve(n);
+            } else {
+                reject(n);
+            }
+        }, 1000);
 
     });
+}
+
+const t3 = timer3();
+t3.then(r => {
+    // console.log('Promesa resuelta!', r);
+}).catch(error => {
+    // console.log('Rejected!!!', error);
+});
+
+
+const requestComments = window.fetch('https://jsonplaceholder.typicode.com/comments');
+requestComments.then(response => {
+    const d = response.json();
+    d.then(comments => {
+        console.log(comments);
+    });
+});
+
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <form id="my-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    placeholder="Add your name"
+                    onblur="doBlur();"
+                />
+            </div>
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input
+                    type="text"
+                    id="lastname"
+                    class="form-control"
+                    placeholder="Add your lastname"
+                    onblur="doBlur();"
+                />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Add your email"
+                    onblur="doBlur();"
+                />
+            </div>
+            <div class="form-group">
+                <label for="email">Picture</label>
+                <input
+                    type="file"
+                    id="file"
+                />
+            </div>
+            <div id="image-loaded"></div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <script type="text/javascript" src="./form3.js"></script>
+</body>
+</html>
